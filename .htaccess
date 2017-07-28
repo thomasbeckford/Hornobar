@@ -1,0 +1,8 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.hornobar\.com\.ar)(:80)? [NC]
+RewriteRule ^(.*) http://hornobar.com.ar/$1 [R=301,L]
+DirectoryIndex index.html       
+order deny,allow

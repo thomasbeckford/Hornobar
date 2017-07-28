@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang=es>
+<head>
+<title>Hornobar - Restaurante</title>
+
+<meta charset="UTF-8"/> 
+<meta name=description content="Restaurante">
+<meta name=keywords content="san isidro, bajo, restaurant, comidas, rio, hornobar, wraps, hamburgesas">
+
+<!-- <meta name=author content>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+
+<link rel=stylesheet href=css/bootstrap.min.css>
+<link rel=stylesheet href=css/bootstrap-theme.css>
+<link rel=stylesheet href=js/superslides/superslides.css>
+<link href=js/simplelightbox/simplelightbox.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=js/jquery-timepicker/jquery.timepicker.css>
+<link rel=stylesheet href=js/bootstrap-datepicker/bootstrap-datepicker.css>
+<link rel=stylesheet href=js/jQuery-flexImages/jquery.flex-images.css>
+<link type=text/css href=js/pushy/pushy.css rel=stylesheet />
+<link rel=stylesheet href=css/main.css>
+<link rel=stylesheet href=css/custom.css>
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<!--[if lt IE 9]>
+<script src=js/vendor/html5-3.6-respond-1.4.2.min.js></script>
+<![endif]-->
+</head>
+<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+<body>
+<div id=preloader>
+<div id=status>&nbsp;</div>
+</div>
+<div class=off-canvas-menu>
+<a class=menu-btn id=hamburger><span></span></a>
+<nav class="pushy pushy-right main-menu">
+<a class="close-btn menu-btn"><i class="icon icon-cross"></i></a>
+<a class=brand><img src=images/logo.png alt class=img-responsive></img></a>
+<ul class="list-unstyled menu-items" id=menu-items>
+<li class=pushy-link><a href=#home>Pagina principal</a></li>
+<li class=pushy-link><a href=#our-menu>Nuestro menú</a></li>
+<li class=pushy-link><a href=#gallery>Nuestros platos</a></li>
+<li class=pushy-link><a href=#reservation>Reservas / Horarios</a></li>
+<li class=pushy-link><a href=#contact>Contacto</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+/*
+   name - name of the cookie
+   value - value of the cookie
+   [expires] - expiration date of the cookie
+     (defaults to end of current session)
+   [path] - path for which the cookie is valid
+     (defaults to path of calling document)
+   [domain] - domain for which the cookie is valid
+     (defaults to domain of calling document)
+   [secure] - Boolean value indicating if the cookie transmission requires
+     a secure transmission
+   * an argument defaults when it is assigned null as a placeholder
+   * a null placeholder is not required for trailing omitted arguments
+*/
+
+function setCookie(name, value, expires, path, domain, secure) {
+  var curCookie = name + "=" + escape(value) +
+      ((expires) ? "; expires=" + expires.toGMTString() : "") +
+      ((path) ? "; path=" + path : "") +
+      ((domain) ? "; domain=" + domain : "") +
+      ((secure) ? "; secure" : "");
+  document.cookie = curCookie;
+}
+
+/*
+  name - name of the desired cookie
+  return string containing value of specified cookie or null
+  if cookie does not exist
+*/
+
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else
+    begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+    end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+
+/*
+   name - name of the cookie
+   [path] - path of the cookie (must be same as path used to create cookie)
+   [domain] - domain of the cookie (must be same as domain used to
+     create cookie)
+   path and domain default if assigned null or omitted if no explicit
+     argument proceeds
+*/
+
+function deleteCookie(name, path, domain) {
+  if (getCookie(name)) {
+    document.cookie = name + "=" +
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
+}
+// date - any instance of the Date object
+// * hand all instances of the Date object to this function for "repairs"
+
+function fixDate(date) {
+  var base = new Date(0);
+  var skew = base.getTime();
+  if (skew > 0)
+    date.setTime(date.getTime() - skew);
+}
+// -->
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// create an instance of the Date object
+var now = new Date();
+// fix the bug in Navigator 2.0, Macintosh
+fixDate(now);
+// cookie expires in one year (actually, 365 days)
+// 365 days in a year
+// 24 hours in a day
+// 60 minutes in an hour
+// 60 seconds in a minute
+// 1000 milliseconds in a second
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+var visits = getCookie("counter");
+// if the cookie was not found, this is your first visit
+if (!visits) {
+  visits = 1; // the value for the new cookie
+  document.write(visits);
+} else {
+  // increment the counter
+  visits = parseInt(visits) + 1;
+  document.write(visits);
+}
+// set the new cookie
+setCookie("counter", visits, now);
+// -->
+
+
+
+
+</SCRIPT>
+
+
+
+
+<div class="social clearfix">
+<a href="https://www.facebook.com/Hornobar-939390592790568/?fref=ts"><i class="icon icon-facebook"></i></a>
+<a href=https://www.instagram.com/hornobar><i class="icon icon-instagram"></i></a>
+<a href=https://plus.google.com/113792373730289110775><i class="icon icon-google-plus"></i></a>
+<a href=https://www.yelp.com.ar/biz/hornobar-san-isidro><i class="icon icon-restaurant"></i></a>
+</div>
+</nav>
+</div>
+<div class=site-overlay></div>
+<div id=container>
+<section id=home  style="background-color:black">
+<div class=caption>
+<div style="font-family:IMFELLDW;">
+<h2>Hornobar</h2>
+</div>
+<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+<div style="font-family: 'Cinzel', serif;">
+<font style=font-size:12px;>COMIDAS HECHAS AL HORNO DE BARRO</font>
+</div></br>
+<ul class="soc">
+    <li><a class="soc-facebook" target="_blank" href="https://www.facebook.com/Hornobar-939390592790568/?fref=ts"></a></li>
+    <li><a class="soc-instagram" target="_blank" href="https://www.instagram.com/hornobar"></a></li>
+    <li><a class="soc-tripadvisor" target="_blank" href="https://www.tripadvisor.com.ar/Restaurant_Review-g947955-d8037875-Reviews-Hornobar-San_Isidro_Province_of_Buenos_Aires_Central_Argentina.html"></a></li>
+    <li><a class="soc-yelp soc-icon-last" target="_blank" href="https://www.yelp.com.ar/biz/hornobar-san-isidro"></a></li>
+</ul>
+</div>
+
+</section>
+<section id=our-menu>
+<div class=container>
+<h2>Nuestro menú</h2>
+<div class=menu-table>
+<ul class="nav nav-tabs menu-tabs" role=tablist>
+<li class=active>
+<a href=#soups-salads-appetizers aria-controls=soups-salads-appetizers role=tab data-toggle=tab class="icon icon-home"><span>Entradas - Wraps</span></a>
+</li>
+<li>
+<a href=#organic-pastas aria-controls=prganic-pastas role=tab data-toggle=tab>Burgers - Ciabattas</a>
+</li>
+<li>
+<a href=#pizza aria-controls=pizza role=tab data-toggle=tab>Ensaladas - Platos</a>
+</li>
+<li>
+<a href=#entrees aria-controls=entrees role=tab data-toggle=tab>Bebidas</a>
+</li>
+<li>
+<a href=#desserts aria-controls=desserts role=tab data-toggle=tab>Postres</a>
+</li>
+</ul>
+<div class=tab-content>
+<div class="tab-pane active fade in" id=soups-salads-appetizers>
+<div class=row>
+<div class=menu-group>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Rabas</span>
+<span class=menu-descp>Calamares fritos</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Provoleta</span>
+<span class=menu-descp>Queso, oregano y aceite de oliva</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Papas bravas</span>
+<span class=menu-descp>Unicas e irresistibles, acompañadas con aderezos</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Wrap vegetariano</span>
+<span class=menu-descp>Berenjenas, zucchinis, morrón, portobellos, hummus, tabule, queso brie, rucula, tomate, aceite de albahaca</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Wrap de ternera</span>
+<span class=menu-descp>Cheddar, pepino, panceta, cole slaw, morrones asados, mayo ali oli y salsa tex-mex</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Wrap de pollo</span>
+<span class=menu-descp>Guacamole, repollo agridulce, porotos negros, choclo, provolone y honey mustard</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Wrap de bondiola</span>
+<span class=menu-descp>Bondiola braseada a la cerveza, portobellos, rúcula, provolene, hummus y tabule</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id=organic-pastas>
+<div class=row>
+<div class=menu-group>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Burger Latrank</span>
+<span class=menu-descp>Mayo ali oli, rucula, tomate y brie</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Burger Falsa royal</span>
+<span class=menu-descp>Cheddar, cebolla caramelizada, panceta, pepinillos, ketchup y mostaza</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Ciabatta vegetariana</span>
+<span class=menu-descp>Berenjenas, zucchinis, morrón, portobellos, hummus, tabule, queso brie, rucula</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Ciabatta de ternera</span>
+<span class=menu-descp>Cheddar, pepino, panceta, cole slaw, morrones asados, mayo ali oli y salsa tex-mex</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Ciabatta italiana</span>
+<span class=menu-descp>Jamón crudo, Rucula, tomate, queso brie, aceite de albahaca y un toque de mayo ali oli</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id=pizza>
+<div class=row>
+<div class=menu-group>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Rissoto del día</span>
+<span class=menu-descp>Plato hecho a base de arroz</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Ensalada veggie</span>
+<span class=menu-descp>Timbal de berenjenas, zucchinis, morron y portobellos asados con tabule, queso brie, almendras tostadas y cherrys confitados</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Ensalada de salmon</span>
+<span class=menu-descp>Sobre mix de verdes, mango, huevo poche, almendras y semillas de sesamo tostadas, palta y aderezo de soja, jenjibre y lima</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Plato del día</span>
+<span class=menu-descp>Consultar</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id=entrees>
+<div class=row>
+<div class=menu-group>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Heineken</span>
+<span class=menu-descp>Porron/Litro</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Imperial</span>
+<span class=menu-descp>Porron/Litro</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Antares</span>
+<span class=menu-descp>Artesanal</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Amstel</span>
+<span class=menu-descp>970cc</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Sol</span>
+<span class=menu-descp>Long neck</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Chopp</span>
+<span class=menu-descp>Pinta</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Chopp</span>
+<span class=menu-descp>Copa</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Fabre Montmayou </span>
+<span class=menu-descp>Reserva, Merlot, Malbec, Cabernet Franc</span>
+</div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-3">
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Stocco de Viani </span>
+<span class=menu-descp>Cab Sauvignon</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Terruño del Moro </span>
+<span class=menu-descp>Vino</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Fernet Branca </span>
+<span class=menu-descp>Vaso trago largo</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Campari </span>
+<span class=menu-descp>Vaso trago largo</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Cafe</span>
+<span class=menu-descp>Nespresso</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=tab-pane id=desserts>
+<div class=row>
+<div class=menu-group>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Bombita</span>
+<span class=menu-descp>Crema Americana, brownie, dulce de leche y almendrado</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Flan</span>
+<span class=menu-descp>Flan con crema y dulce de leche</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Cheesecake</span>
+<span class=menu-descp>Tarta de queso americana</span>
+</div>
+</div>
+<div class="menu-group-item clearfix col-lg-6 col-md-6 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-3 hidden-xs">
+</div>
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-9">
+<span class=menu-title>Queso y dulce</span>
+<span class=menu-descp>Vigilante</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=gallery class=gallery style="background-color: #1a1a1a">
+<h2 style=color:white>Nuestros platos</h2>
+<div class=flex-images>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/1.jpg>
+<img src=images/gallery/thumb/1.jpg alt title="Bondiola braseada con cremoso de batata" />
+</a>
+</figure>
+<figure class=item data-w=250 data-h=250>
+<a href=images/gallery/large/2.jpg>
+<img src=images/gallery/thumb/2.jpg alt title="Ojo de bife con papa aplastada y ensalada mixta" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/3.jpg>
+<img src=images/gallery/thumb/3.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/4.jpg>
+<img src=images/gallery/thumb/4.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=688>
+<a href=images/gallery/large/5.jpg>
+<img src=images/gallery/thumb/5.jpg alt title="Postre bombita" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/6.jpg>
+<img src=images/gallery/thumb/6.jpg alt title="Trucha al horno de barro, con langostinos, verduras y salsita de mango y maracuya" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/7.jpg>
+<img src=images/gallery/thumb/7.jpg alt title="Wok de pollo y vegetales" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=684>
+<a href=images/gallery/large/8.jpg>
+<img src=images/gallery/thumb/8.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=1080 data-h=1080>
+<a href=images/gallery/large/9.jpg>
+<img src=images/gallery/thumb/9.jpg alt title="Gambas al ajillo" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/10.jpg>
+<img src=images/gallery/thumb/10.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/11.jpg>
+<img src=images/gallery/thumb/11.jpg alt title="Wrap de ternera" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/12.jpg>
+<img src=images/gallery/thumb/12.jpg alt title="Costillar al Malbec con puré de papa, calabaza y ajo" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/13.jpg>
+<img src=images/gallery/thumb/13.jpg alt title="Guiso de lentejas" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/14.jpg>
+<img src=images/gallery/thumb/14.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/15.jpg>
+<img src=images/gallery/thumb/15.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/16.jpg>
+<img src=images/gallery/thumb/16.jpg alt title="Bife con chimi y papas a la crema" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/17.jpg>
+<img src=images/gallery/thumb/17.jpg alt title />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/18.jpg>
+<img src=images/gallery/thumb/18.jpg alt title="Shrimp Salad" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/19.jpg>
+<img src=images/gallery/thumb/19.jpg alt title="Pasta Mediterránea" />
+</a>
+</figure>
+<figure class=item data-w=640 data-h=640>
+<a href=images/gallery/large/20.jpg>
+<img src=images/gallery/thumb/20.jpg alt title="Ñoquis con crema de hongos de pino" />
+</a>
+</figure>
+
+</div>
+</section>
+<section id=reservation class="clearfix reservation" style=background-color:#1a1a1a>
+<div class=reserve-header>
+<div class=container>
+<div class="col-sm-6 f-n center-block">
+<h2>Hacé tu reserva</h2>
+<p>Realizamos todas las reservas por teléfono. Comunicate al 4743-2243.</p>
+</div>
+</div>
+</div>
+<div class="container reservation-container">
+<div class=row>
+<div class="col-md-5 reservation-form">
+<h2 style=color:white>Sugerencias</h2>
+<form name=contactform method=post action=mailer.php class=form-horizontal role=form>
+<div class=form-group>
+<label for=inputName class="col-lg-2 control-label">Nombre</label>
+<div class=col-lg-10>
+<input type=text style=border-radius:0 class=form-control id=inputName name=inputName placeholder="Tu nombre">
+</div>
+</div>
+<div class=form-group>
+<label for=inputEmail1 class="col-lg-2 control-label">Email</label>
+<div class=col-lg-10>
+<input type=text style=border-radius:0 class=form-control id=inputEmail name=inputEmail placeholder="Tu email">
+</div>
+</div>
+<div class=form-group>
+<label for=inputSubject class="col-lg-2 control-label">Asunto</label>
+<div class=col-lg-10>
+<input type=text style=border-radius:0 class=form-control id=inputSubject name=inputSubject placeholder="Asunto del mensaje">
+</div>
+</div>
+<div class=form-group>
+<label for=inputPassword1 class="col-lg-2 control-label">Mensaje</label>
+<div class=col-lg-10>
+<textarea class=form-control style=border-radius:0 rows=4 id=inputMessage name=inputMessage placeholder="Tu mensaje..."></textarea>
+</div>
+</div>
+<div class=form-group>
+<div class="col-lg-offset-2 col-lg-10">
+<button type=submit class="btn btn-default">
+Enviar mensaje
+</button>
+</div>
+</div>
+</form>
+</div>
+<hr class=visible-sm>
+<div class="col-md-4 col-md-offset-2">
+<div class=opening-hours>
+<div class=frame>
+<h2>Horarios</h2>
+<ul class=list-unstyled>
+<li>
+<p>Todos los días</p>
+<p>20hs - 00hs</p>
+</li>
+<li>
+<p>Viernes, Sabados, Domingos y Feriados</p>
+<p>TAMBIÉN al mediodia</p>
+<p>12hs - 16hs</p>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=contact>
+<div id=map class=hidden-xs></div>
+<div class=container>
+<div class=contact-details>
+<h2>Contacto </h2>
+<p>Estamos ubicados frente a las vías del tren de la costa sobre la calle Roque Sáenz Peña.</p>
+<div class=contact-phone><i class="icon icon-phone"></i> 011 4743-2243</div>
+<div class=contact-email><i class="icon icon-envelope"></i> contacto@hornobar.com.ar</div>
+<div class=contact-addresss><i class="icon icon-restaurant"></i> 1004, Roque Sáenz Peña. San Isidro, BsAs</div>
+<a data-toggle=modal data-target=#gmaps href=#gmaps> Ver mapa</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class=container>
+<p>© Copyright 2016 Hornobar. Todos los derechos reservados.</p>
+<p style=float:right>Programacion: <a href=mailto:tebeckford@gmail.com style=text-decoration:none><b>tebeckford@gmail.com</b></a></p>
+<p style=float:left>Logo: <a href=mailto:anies8@hotmail.com style=text-decoration:none><b>anies8@hotmail.com</b></a></p>
+</div>
+</footer>
+</div>
+<script src=js/vendor/jquery-1.11.2.min.js></script>
+<script type=text/javascript>$(window).load(function(){$("#status").fadeOut();$("#preloader").delay(350).fadeOut("slow");$("body").delay(350).css({overflow:"visible"})});</script>
+<script src=js/vendor/bootstrap.min.js></script>
+<script src=js/superslides/jquery.superslides.min.js></script>
+<script src=js/simplelightbox/simple-lightbox.min.js></script>
+<script src=js/bootstrap-datepicker/bootstrap-datepicker.min.js></script>
+<script src=js/jquery-timepicker/jquery.timepicker.min.js></script>
+<script src=js/jQuery-flexImages/jquery.flex-images.min.js></script>
+<script type=text/javascript src=js/pushy/pushy.js></script>
+<script src=js/jquery-one-page-nav/jquery.nav.js></script>
+<script type=text/javascript src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src=js/main.js></script>
+<div id=gmaps class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<button type=button class=close data-dismiss=modal>&times;</button>
+<h4 class=modal-title>Ubicación</h4>
+</div>
+<div class=modal-body>
+<form>
+<style type=text/css>#map{overflow:hidden}</style>
+<div id=map>
+<iframe style=overflow:hidden;border:0 src="https://www.google.com.ar/maps/embed?pb=!1m14!1m8!1m3!1d13157.37215869043!2d-58.5021685!3d-34.468821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x78666d8ff55c8a1f!2sHornoBar!5e0!3m2!1ses-419!2s!4v1463081538558"width=640 height=540 frameborder=0 style=border:0 allowfullscreen></iframe>
+</div>
+</form>
+</div>
+<div class=modal-footer>
+<button type=button class="btn btn-default" data-dismiss=modal>Cerrar</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
