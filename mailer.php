@@ -1,4 +1,7 @@
 <?php
+
+die("funciona");
+
 /* Set*/
 $myemail = "tebeckford@gmail.com";
 $destinatario = "hornobar";
@@ -6,10 +9,10 @@ $marca = "hornobar";
 $redirige = "http://hornobar.com.ar";
 
 /* Check all form inputs using check_input function */
-$name = check_input($_POST['inputName'], "Your Name");
-$email = check_input($_POST['inputEmail'], "Your E-mail Address");
-$subject = check_input($_POST['inputSubject'], "Message Subject");
-$message = check_input($_POST['inputMessage'], "Your Message");
+$name = $_POST['inputName'], "Your Name";
+$email = $_POST['inputEmail'], "Your E-mail Address";
+$subject = $_POST['inputSubject'], "Message Subject";
+$message = $_POST['inputMessage'], "Your Message";
 $header = "From: $destinatario" . "\r\n";
 
 /* If e-mail is not valid show error message */
