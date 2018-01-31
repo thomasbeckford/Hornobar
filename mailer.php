@@ -1,9 +1,9 @@
 <?php
 /* Set*/
 $myemail = "tebeckford@gmail.com";
-$destinatario = "info@thecraftbeertruck.com.ar"
-$marca = "thecraftbeertruck"
-$redirige = "http://thecraftbeertruck.com.ar"
+$destinatario = "hornobar";
+$marca = "hornobar";
+$redirige = "http://hornobar.com.ar";
 
 /* Check all form inputs using check_input function */
 $name = check_input($_POST['inputName'], "Your Name");
